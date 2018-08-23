@@ -5,7 +5,7 @@
 
     <groupId>de.kotlincook</groupId>
     <artifactId>kotlin-chess</artifactId>
-    <version>0.3</version>
+    <version>0.4</version>
     <packaging>jar</packaging>
 
     <name>kotlin-chess</name>
@@ -22,7 +22,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <kotlin.version>1.2.61</kotlin.version>
+        <kotlin.version>1.2.60</kotlin.version>
         <vaadin.version>10.0.2</vaadin.version>
     </properties>
 
@@ -90,11 +90,6 @@
             <version>${kotlin.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.jetbrains.kotlinx</groupId>
-            <artifactId>kotlinx-coroutines-core</artifactId>
-            <version>0.24.0</version>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
@@ -130,5 +125,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>
