@@ -7,5 +7,6 @@ interface Locatable {
 
     val board: Board
     val coord: ChessCoord
+        get() = TODO()
 
 }
