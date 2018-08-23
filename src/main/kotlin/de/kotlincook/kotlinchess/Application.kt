@@ -5,8 +5,9 @@ import org.springframework.boot.runApplication
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 @SpringBootApplication
-class Application : SpringBootServletInitializer()
+class KotlinChessApplication
 
 fun main(args: Array<String>) {
-    runApplication<Application>(*args)
+    runApplication<KotlinChessApplication>(*args)
 }
+
