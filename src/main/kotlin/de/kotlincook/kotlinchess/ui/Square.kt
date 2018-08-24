@@ -28,5 +28,5 @@ class Square(override val coord: ChessCoord) : Div(), Locatable {
     }
 
     override val board: Board
-        get() = TODO("not implemented")
+        get() = parent as Board
 }
