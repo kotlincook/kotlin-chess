@@ -8,6 +8,17 @@ import de.kotlincook.kotlinchess.ui.Locatable
 
 class Square(override val coord: ChessCoord) : Div(), Locatable {
 
+    var piece: Piece?
+        set(value) {
+            removeAll()
+            if (value != null) add(value)
+        }
+        get() {
+            val optPiece = children.findAny()
+            return if (optPiece.isPresent) optPiece.get() as Piece else null
+        }
+
+
     init {
         setId("square_$coord")
         className = when (coord.color()) {
@@ -18,5 +29,4 @@ class Square(override val coord: ChessCoord) : Div(), Locatable {
 
     override val board: Board
         get() = TODO("not implemented")
-
 }
