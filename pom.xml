@@ -5,7 +5,7 @@
 
     <groupId>de.kotlincook</groupId>
     <artifactId>kotlin-chess</artifactId>
-    <version>0.7</version>
+    <version>0.9</version>
     <packaging>jar</packaging>
 
     <name>kotlin-chess</name>
