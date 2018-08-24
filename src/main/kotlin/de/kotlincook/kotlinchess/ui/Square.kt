@@ -3,6 +3,7 @@ package de.kotlincook.chess.ui
 import com.vaadin.flow.component.html.Div
 import de.kotlincook.kotlinchess.ChessCoord
 import de.kotlincook.kotlinchess.Color
+import de.kotlincook.kotlinchess.getOrNull
 import de.kotlincook.kotlinchess.ui.Board
 import de.kotlincook.kotlinchess.ui.Locatable
 
@@ -13,10 +14,7 @@ class Square(override val coord: ChessCoord) : Div(), Locatable {
             removeAll()
             if (value != null) add(value)
         }
-        get() {
-            val optPiece = children.findAny()
-            return if (optPiece.isPresent) optPiece.get() as Piece else null
-        }
+        get() = children.findAny().getOrNull()
 
 
     init {
@@ -30,3 +28,4 @@ class Square(override val coord: ChessCoord) : Div(), Locatable {
     override val board: Board
         get() = parent as Board
 }
+

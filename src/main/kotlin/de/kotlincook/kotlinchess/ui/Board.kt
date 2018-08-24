@@ -6,6 +6,7 @@ import com.vaadin.flow.router.Route
 import de.kotlincook.chess.ui.Piece
 import de.kotlincook.chess.ui.Square
 import de.kotlincook.kotlinchess.ChessCoord
+import de.kotlincook.kotlinchess.ChessMove
 import de.kotlincook.kotlinchess.HorCoord
 import de.kotlincook.kotlinchess.HorCoord.*
 import de.kotlincook.kotlinchess.VertCoord
@@ -61,5 +62,13 @@ class Board() : Div() {
     fun squareAt(coord: ChessCoord) = squares.at(coord)
 
     fun pieceAt(coord: ChessCoord) = squareAt(coord).piece
+
+    fun handleIncomingMove(chessMove: ChessMove) {
+        TODO()
+    }
+
+    fun performMove(from: ChessCoord, to: ChessCoord) {
+        TODO()
+    }
 
 }
