@@ -36,4 +36,3 @@ data class ChessCoord(val hor: HorCoord, val vert: VertCoord) {
 }
 
 data class ChessMove(val from: ChessCoord, val to: ChessCoord)
-

@@ -15,13 +15,15 @@ class DragstartEvent(source : Piece, fromClient : Boolean) : ComponentEvent<Piec
 class Piece(src: String, alt: String) : Image(src, alt), Locatable {
 
     override val board: Board
-        get() = (parent.get() as Piece).board
+        get() = (parent.get() as Square).board
 
     init {
         className = "piece"
         setId(alt)
         UI.getCurrent().page.addDragSupport(element)
-        addListener(DragstartEvent::class.java) { e -> println(e.source) }
+        addListener(DragstartEvent::class.java) {
+            board.moveFrom = it.source.coord
+        }
     }
 
 }

@@ -17,5 +17,7 @@ interface Locatable {
 //        }
 
     val coord: ChessCoord
-        get() = ChessCoord.iterator().first { board.squareAt(it) === this || board.pieceAt(coord) === this }
+        get() = ChessCoord.iterator().first {
+            coord -> board.squareAt(coord) === this || board.pieceAt(coord) === this
+        }
 }

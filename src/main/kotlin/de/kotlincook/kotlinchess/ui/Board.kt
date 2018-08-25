@@ -32,6 +32,8 @@ class Board() : Div() {
                 }
     }
 
+    var moveFrom : ChessCoord? = null
+
     init {
         squares[A,_1].piece = Piece("frontend/icons/rookWhite.png", "white_rook_A")
         squares[B,_1].piece = Piece("frontend/icons/knightWhite1.png", "white_knight_B")
@@ -67,8 +69,8 @@ class Board() : Div() {
         TODO()
     }
 
-    fun performMove(from: ChessCoord, to: ChessCoord) {
-        TODO()
+    fun performMove(move: ChessMove) {
+        squares.at(move.to).piece = squares.at(move.from).piece
     }
 
 }
